@@ -15,5 +15,5 @@ if (process.argv.length == 4) {
 		}
 	});
 } else {
-	console.log("Usage: program4.js <path_to_file>");
+	console.log("Usage: program4.js <dir_path> <extension>");
 }
