@@ -1,4 +1,4 @@
-// program2.js
+// program4.js
 
 var fs = require('fs');
 var path = require('path');
