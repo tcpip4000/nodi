@@ -3,7 +3,8 @@ var bl = require('bl');
 
 http.get(process.argv[2], function(res) {
 	res.pipe(bl(function(err, data) {
-		if (err) throw err;
+		if (err) 
+			console.error(error);
 		data = data.toString();
 		console.log(data.length);
 		console.log(data);
