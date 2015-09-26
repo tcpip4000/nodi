@@ -2,15 +2,20 @@
 
 var http = require('http');
 
-module.exports = function(url, callback) {
+module.exports = function(pos, url, callback) {
 	http.get(url, function(res) {
+		var response = [];
 		var content = '';
+
+		response.push(pos);
+
 		res.setEncoding('utf8');
 		res.on("data", function(data) {
 			content += data;
 		});
 		res.on("end", function(data) {
-			callback(null, content);
+			response.push(content);
+			callback(null, response);
 		});
 		res.on("error", console.error);
 	});
