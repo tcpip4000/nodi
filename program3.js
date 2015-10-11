@@ -10,5 +10,5 @@ if (process.argv.length == 3) {
 		console.log(fileSplitted.length - 1);
 	});
 } else {
-	console.log("Usage: program2.js <path_to_file>");
+	console.log("Usage: program3.js <path_to_file>");
 }
